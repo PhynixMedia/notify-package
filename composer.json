@@ -1,0 +1,25 @@
+{
+  "name": "phynix/notify",
+  "description": "Notification Package",
+  "license": ["MIT"],
+  "authors": [
+    {
+      "name": "Phynix Media ltd",
+      "email": "david.adebayo@phynixmedia.co.uk"
+    }
+  ],
+  "minimum-stability": "stable",
+  "require": {},
+  "autoload": {
+    "psr-4": {
+      "Notify\\App\\":"src"
+    }
+  },
+  "extra": {
+    "laravel":{
+      "providers":[
+        "Notify\\App\\NotifyServiceProvider"
+      ]
+    }
+  }
+}
