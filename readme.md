@@ -4,7 +4,7 @@
 
 > Sending Email: requires:
 ```angular2html
-$to    = "david4real_chris@yahoo.com";
+$to    = "david_chris@yahoo.com";
 $subject = "Hello Testing Email Sender";
 $message = "Testing Email Sender for application for the system we are sending for the library";
 (new EmailService())->run($to, $subject, $message);
@@ -20,7 +20,32 @@ $sms   = "Testing the new system for the applications Testing Email Sender for a
 
 > Sending FCM requires:
 ```angular2html
-$receiver    = "eafzQ0wd90JDnF1eTigajp:APA91bGvAFQDwi0z0SCLt5EjxA_5XNproeWcfzwLhrmPCeE3apnjg3W5MU3rWv51q58IWSZxLD1S7mPUk46j6qlCPu3isy2u213iNR1r8sA-fIEVAjFlQQr0Znp5uGS-CkWgJ8jsAxoM";
+$receiver    = "-CkWgJ8jsAxoM";
 $message = "Testing Email Sender for application for the system we are sending for the library";
 (new FcmService())->run($receiver, $message);
 ```
+
+> running cron job
+
+```angular2html
+Registering in Kernel:
+
+Under Commands:
+
+protected $commands = [
+    'Notify\App\Command\SmsSender',
+    'Notify\App\Command\EmailSender',
+    'Notify\App\Command\FcmSender',
+];
+
+protected function schedule(Schedule $schedule)
+{
+    $schedule->command('notify:sms')->everyMinute();
+    $schedule->command('notify:email')->everyMinute();
+    $schedule->command('notify:fcm')->everyMinute();
+}
+```
+
+````angular2html
+
+````
