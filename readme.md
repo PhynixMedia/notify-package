@@ -47,5 +47,12 @@ protected function schedule(Schedule $schedule)
 ```
 
 ````angular2html
+.ENV keys:
 
+PHYNIX_EMAIL_SENDER="Company Ltd<send@phynixmedia.co.uk>"
+PHYNIX_EMAIL_API=https://fault/US-Ea
+PHYNIX_SMS_API=https://wnj0nvhmyClo
+PHYNIX_FCM_SENDER_ID=AAAA1Sr-UqPOjqB5gazX9I8b
+PHYNIX_SEND_COUNTER=10
+PHYNIX_SENDER_CODE=CompanyL
 ````
