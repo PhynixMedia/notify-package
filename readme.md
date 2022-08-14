@@ -56,3 +56,12 @@ PHYNIX_FCM_SENDER_ID=AAAA1Sr-UqPOjqB5gazX9I8b
 PHYNIX_SEND_COUNTER=10
 PHYNIX_SENDER_CODE=CompanyL
 ````
+
+> Run migrations
+``` 
+
+php artisan migrate --path=/database/migrations/2022_06_23_140303_create_log_emails_table.php
+php artisan migrate --path=/database/migrations/2022_06_23_140433_create_log_fcm_table.php
+php artisan migrate --path=/database/migrations/2022_06_23_140433_create_log_sms_table.php
+
+```
