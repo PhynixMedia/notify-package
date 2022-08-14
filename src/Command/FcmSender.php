@@ -3,7 +3,7 @@
 namespace Notify\App\Command;
 
 use Illuminate\Console\Command;
-use Notify\App\Events\FcmEvent;
+use Notify\App\Events\InvoiceDueEvent;
 
 class FcmSender extends Command
 {
@@ -38,6 +38,6 @@ class FcmSender extends Command
      */
     public function handle()
     {
-        event(new FcmEvent());
+        event(new InvoiceDueEvent());
     }
 }

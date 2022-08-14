@@ -14,7 +14,7 @@ class NotifyServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->register(NotifyEventServiceProvider::class);
+//        $this->app->register(InvoiceEventServiceProvider::class);
     }
 
     /**

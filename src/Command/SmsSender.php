@@ -2,7 +2,7 @@
 namespace Notify\App\Command;
 
 use Illuminate\Console\Command;
-use Notify\App\Events\SmsEvent;
+use Notify\App\Events\ReminderEvent;
 
 class SmsSender extends Command
 {
@@ -37,6 +37,6 @@ class SmsSender extends Command
      */
     public function handle()
     {
-        event(new SmsEvent());
+        event(new ReminderEvent());
     }
 }

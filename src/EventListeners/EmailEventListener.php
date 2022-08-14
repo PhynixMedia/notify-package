@@ -4,7 +4,7 @@ namespace Notify\App\EventListeners;
 
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
-use Notify\App\Events\EmailEvent;
+use Notify\App\Events\AutoRunEvent;
 use Notify\App\Services\Email\EmailService;
 
 class EmailEventListener
@@ -22,10 +22,10 @@ class EmailEventListener
     /**
      * Handle the event.
      *
-     * @param  EmailEvent  $event
+     * @param  AutoRunEvent  $event
      * @return void
      */
-    public function handle(EmailEvent $event)
+    public function handle(AutoRunEvent $event)
     {
         \Log::info("Changes to test event");
 

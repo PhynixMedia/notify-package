@@ -4,7 +4,7 @@ namespace Notify\App\EventListeners;
 
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
-use Notify\App\Events\SmsEvent;
+use Notify\App\Events\ReminderEvent;
 use Notify\App\Services\Sms\SmsService;
 
 class SmsEventListener
@@ -22,10 +22,10 @@ class SmsEventListener
     /**
      * Handle the event.
      *
-     * @param  SmsEvent  $event
+     * @param  ReminderEvent  $event
      * @return void
      */
-    public function handle(SmsEvent $event)
+    public function handle(ReminderEvent $event)
     {
         /** * use this method  */
         (new SmsService())->runMany($event->data);

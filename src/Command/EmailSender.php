@@ -2,7 +2,7 @@
 namespace Notify\App\Command;
 
 use Illuminate\Console\Command;
-use Notify\App\Events\EmailEvent;
+use Notify\App\Events\AutoRunEvent;
 
 class EmailSender extends Command
 {
@@ -37,6 +37,6 @@ class EmailSender extends Command
      */
     public function handle()
     {
-        event(new EmailEvent());
+        event(new AutoRunEvent());
     }
 }

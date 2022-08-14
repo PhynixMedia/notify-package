@@ -4,7 +4,7 @@ namespace Notify\App\EventListeners;
 
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
-use Notify\App\Events\FcmEvent;
+use Notify\App\Events\InvoiceDueEvent;
 use Notify\App\Services\Fcm\FcmService;
 
 class FcmEventListener
@@ -22,10 +22,10 @@ class FcmEventListener
     /**
      * Handle the event.
      *
-     * @param  FcmEvent  $event
+     * @param  InvoiceDueEvent  $event
      * @return void
      */
-    public function handle(FcmEvent $event)
+    public function handle(InvoiceDueEvent $event)
     {
         /** * use this method  */
         (new FcmService())->runMany($event->data);
