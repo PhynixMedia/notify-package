@@ -1,6 +1,6 @@
 <?php
 
-namespace Notify\App\Controllers\Pages;
+namespace Notify\App\Controllers\Mails;
 
 use Cms\App\Controllers\BaseController;
 use Cms\App\Models\Pages\Relations\BlogRelations;
