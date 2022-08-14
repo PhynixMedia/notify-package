@@ -121,7 +121,11 @@ class MailController extends NotifyBaseController {
     {
         switch ($target) {
             case self::EMAILS:
-                $payload = $this->emailService->prepare($request, true);
+                $payload = $this->emailService->prepare($request, true, "");
+                $payload["from"] = config("notify-app.email_sender");
+                $payload["_state"] = 0;
+                $payload["instant"] = 0;
+                $payload["page_count"] = 1;
                 $payload["status"] = 1;
                 if (!$this->emailService->set(map_request($payload))) {
                     return response()->json($this->statusService::error("Create"));
