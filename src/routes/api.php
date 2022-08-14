@@ -6,9 +6,12 @@ Route::group(['prefix' => 'api'], function ($router) {
      */
     Route::group(['prefix' => 'notify'], function () {
 
+        // Notify\App\Controllers\Mails\MailController
         Route::post('/create/{target}', 'Notify\App\Controllers\Mails\MailController@store');
         Route::post('/update/{target}', 'Notify\App\Controllers\Mails\MailController@update');
-        Route::get('/fetch/{target}', 'Notify\App\Controllers\Mails\MailController@all');
+        Route::get('/fetch/{target}', function(){
+            return "Hello world";
+        });
         Route::get('/get/{target}', 'Notify\App\Controllers\Mails\MailController@get');
         Route::post('/search/{target}', 'Notify\App\Controllers\Mails\MailController@find');
         Route::get('/delete/{target}/{identifier}', 'Notify\App\Controllers\Mails\MailController@delete');

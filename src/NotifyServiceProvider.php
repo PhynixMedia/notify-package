@@ -24,7 +24,6 @@ class NotifyServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        include __DIR__ . '/routes/web.php';
         include __DIR__ . '/routes/api.php';
 
         $this->loadMigrationsFrom(__DIR__ . '/database/migrations');
