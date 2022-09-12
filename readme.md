@@ -10,6 +10,14 @@ $message = "Testing Email Sender for application for the system we are sending f
 (new EmailService())->run($to, $subject, $message);
 ```
 
+> Sending Instant Email: requires:
+```angular2html
+$to    = "david_chris@yahoo.com";
+$subject = "Hello Testing Email Sender";
+$message = "Testing Email Sender for application for the system we are sending for the library";
+(new EmailService())->runInstant($to, $subject, $message);
+```
+
 > Sending SMS requires:
 ```angular2html
 $to    = "+447930152290";
@@ -60,8 +68,7 @@ PHYNIX_SENDER_CODE=CompanyL
 > Run migrations
 ``` 
 
-php artisan migrate --path=/database/migrations/2022_06_23_140303_create_log_emails_table.php
-php artisan migrate --path=/database/migrations/2022_06_23_140433_create_log_fcm_table.php
-php artisan migrate --path=/database/migrations/2022_06_23_140433_create_log_sms_table.php
-
+php artisan migrate --path=/vendor/phynix/notify/src/database/migrations/2022_06_23_140303_create_log_emails_table.php
+php artisan migrate --path=/vendor/phynix/notify/src/database/migrations/2022_06_23_140433_create_log_fcm_table.php
+php artisan migrate --path=/vendor/phynix/notify/src/database/migrations/2022_06_23_140433_create_log_sms_table.php
 ```
