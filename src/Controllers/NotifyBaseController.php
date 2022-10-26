@@ -3,7 +3,7 @@
 namespace Notify\App\Controllers;
 
 use App\Http\Controllers\Controller;
-use Cms\App\Services\StatusService;
+use Notify\App\Services\StatusService;
 use Notify\App\Services\Email\EmailLogService;
 use Notify\App\Services\Fcm\FcmLogService;
 use Notify\App\Services\Sms\SmsLogService;
