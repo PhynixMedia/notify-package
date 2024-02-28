@@ -14,6 +14,7 @@ class EmailLogs extends Model
         "to",
         "subject",
         "message",
+        "attachment",
         "_state",
         "schedule_time",
         "instant",
